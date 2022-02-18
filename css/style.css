@@ -1,0 +1,429 @@
+:root {
+    --amarillo: #f1a600;
+    --color-fondo: #111018;
+    --azul-oscuro: #16151f;
+    --gris: #c5c3c3;
+    --blanco: #ffff;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: var(--blanco);
+}
+
+.titulos {
+    font-size: 40px;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagen-cuadrado {
+    position: absolute;
+    width: 650px;
+    z-index: -1;
+    bottom: -48px;
+    left: 842px;
+}
+
+
+/*********************HEADER-NAV***********************/
+
+nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 140px;
+    margin-left: 20px;
+}
+
+.bar-btn {
+    font-size: 25px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 80px;
+    background: rgba(0, 0, 0, .99);
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 10px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.nav-menu li a {
+    color: white;
+    font-size: 16px;
+    font: weight 600px;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:hover {
+    color: var(--amarillo);
+    transition: .3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.nav-menu {
+    height: 100vh;
+}
+
+#check:checked~.nav-menu li {
+    display: block;
+}
+
+
+/*****RESPONSIVE********/
+
+@media screen and (min-width:768px) {
+    .logo {
+        margin-left: 50px;
+    }
+    nav {
+        height: 100px;
+    }
+    .bar-btn {
+        display: none;
+    }
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: none;
+        margin-right: 50px;
+    }
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+    .nav-menu li a {
+        font-size: 12px;
+    }
+    .menu-texto {
+        margin-left: 300px;
+    }
+}
+
+
+/*********************HERO***********************/
+
+.hero {
+    margin: 0px 20px;
+    height: 840px;
+}
+
+.titulo-hero {
+    font-size: 70px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.descripcion-hero {
+    font-size: 38px;
+    font-weight: 300;
+}
+
+.descripcion-hero2 {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.descripcion-hero2 span {
+    font-weight: 400;
+    color: var(--amarillo);
+}
+
+.iconos-hero {
+    display: flex;
+    justify-content: center;
+}
+
+.iconos-hero img {
+    margin: 0 10px;
+    width: 40px;
+}
+
+.imagen-persona {
+    width: 90%;
+    border-radius: 3px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+@media screen and (min-width:992px) {
+    .descripcion-hero {
+        width: 500px;
+    }
+    .iconos-hero {
+        display: flex;
+        justify-content: left;
+    }
+    .imagen-persona {
+        width: 50%;
+        position: relative;
+        bottom: 220px;
+        left: 100px;
+        z-index: -1;
+    }
+}
+
+
+/*********************ACERCA DE MI***********************/
+
+.barra-acerca {
+    background-color: var(--azul-oscuro);
+    text-align: center;
+}
+
+.contendio-acerca {
+    width: 90%;
+    padding: 20px 0;
+}
+
+.iconos-empresa {
+    margin-top: 40px;
+}
+
+@media screen and (min-width:768px) {
+    .parrafo-acerca {
+        padding: 0px 80px;
+    }
+    .iconos-empresa {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+
+
+/************************EXPERIENCIA***********/
+
+.texto-exp {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contendio-experincia {
+    display: flex;
+    justify-content: center;
+}
+
+.contenido-empresas {
+    width: 85%;
+    padding-right: 15px;
+}
+
+.amazon {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    height: 120px;
+}
+
+.amazon img {
+    width: 100px;
+    margin-bottom: 50px;
+}
+
+.amazon h2 {
+    font-size: 18px;
+}
+
+.informacion-empresa p {
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.informacion-empresa p span {
+    color: white;
+    font-weight: 300 !important;
+    font-size: 12px;
+}
+
+.palo img {
+    width: 12px;
+}
+
+@media screen and (min-width:768px) {
+    .contendio-experincia {
+        padding: 0px 250px;
+    }
+}
+
+
+/************************MIS HABILIDADES***********/
+
+.titulo-habilidades {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.contenido-habilidades {
+    height: 400px;
+    width: 70%;
+}
+
+.porcentaje {
+    display: flex;
+    align-items: center;
+}
+
+.porcentaje h2 {
+    color: #f1a600;
+    margin-right: 50px;
+}
+
+.rectangulo-habilidades {
+    position: absolute;
+    top: 2390px;
+    z-index: -1;
+    width: 50%;
+}
+
+.rectangulo-habilidades2 {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .porcentaje {
+        font-size: 22px;
+        margin-left: 90px;
+    }
+    .rectangulo-habilidades {
+        position: absolute;
+        top: 2100px;
+        width: 300px;
+        background-color: #212331;
+    }
+    .rectangulo-habilidades2 {
+        display: block;
+        position: absolute;
+        top: 2100px;
+        z-index: -1;
+        width: 300px;
+        left: 120px;
+        background-color: #212331;
+    }
+}
+
+
+/************************MI PORTAFOLIO***********/
+
+.contenido-portafolio {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.titulo-portafolio {
+    text-align: center;
+}
+
+.cuadrado img {
+    width: 50%;
+}
+
+.cuadrado2 img {
+    width: 250px;
+}
+
+.cuadrado2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width:768px) {
+    .contenido-portafolio {
+        margin-top: 200px;
+    }
+    .cuadrado2 img {
+        width: 500px;
+    }
+}
+
+
+/************************CONTACTO***********/
+
+.contendio-contacto {
+    width: 90%;
+    padding: 20px 0;
+}
+
+.contendio-contacto h2 {
+    margin-bottom: 50px;
+}
+
+.contendio-contacto img {
+    width: 80px;
+}
+
+.contendio-contacto div {
+    margin: 50px;
+}
+
+.info-title {
+    margin: 0px;
+}
+
+.info {
+    color: var(--gris);
+    margin: 8px;
+}
+
+@media screen and (min-width:768px) {
+    .contenido-contacto2 {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/************************FOOTER***********/
+
+.footer {
+    margin: 30px 0px;
+    font-weight: 100;
+    text-align: center;
+    font-size: 6px;
+}
